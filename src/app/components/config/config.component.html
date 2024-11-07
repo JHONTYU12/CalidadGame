@@ -1,0 +1,34 @@
+<div class="config-container">
+  <h2 class="config-title">Juego de Completar Números</h2>
+  <p class="config-description">Aplicación para ayudar a pacientes en ejercicios cognitivos</p>
+
+  <h3 class="welcome-message">Bienvenido, {{ therapistName }} y {{ patientName }}</h3>
+  <p class="intro-message">Inicie la configuración del juego para el paciente.</p>
+
+  <div class="config-form">
+    <h4 class="form-title">Configuración del Juego</h4>
+    <form>
+      <div class="input-group">
+        <label for="start-range">Inicio del rango:</label>
+        <input type="number" id="start-range" class="form-input" [(ngModel)]="inicioRango" placeholder="Inicio del rango" name="start-range">
+      </div>
+      
+      <div class="input-group">
+        <label for="end-range">Fin del rango:</label>
+        <input type="number" id="end-range" class="form-input" [(ngModel)]="finRango" placeholder="Fin del rango" name="end-range">
+      </div>
+      
+      <div class="input-group">
+        <label for="sequence-length">Longitud de la secuencia:</label>
+        <input type="number" id="sequence-length" class="form-input" [(ngModel)]="longitudSecuencia" placeholder="Longitud de la secuencia" name="sequence-length">
+      </div>
+      
+      <div class="input-group">
+        <label for="number-count">Cantidad de números a encontrar:</label>
+        <input type="number" id="number-count" class="form-input" [(ngModel)]="cantidadNumeros" placeholder="Cantidad de números" name="number-count">
+      </div>
+      
+      <button class="btn btn-green" type="button" (click)="startGame()">Iniciar Juego</button>
+    </form>
+  </div>
+</div>

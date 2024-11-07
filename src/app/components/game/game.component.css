@@ -1,0 +1,166 @@
+/* Contenedor principal del juego */
+.game-container {
+  max-width: 800px;
+  width: 90%;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin: 40px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Título del juego */
+.game-title {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+
+/* Lista de números visibles */
+.number-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.5em;
+  color: #34495e;
+  margin-bottom: 30px;
+  overflow-x: auto; /* Para que se mantenga dentro del contenedor */
+}
+
+.number-item {
+  background-color: #eaf2f8;
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 40px;
+  text-align: center;
+  flex: 1 1 50px; /* Permite que se ajusten en tamaño y se distribuyan */
+}
+
+/* Título de los números faltantes */
+.missing-title {
+  font-size: 1.2em;
+  color: #6b7a8f;
+  margin-bottom: 10px;
+}
+
+/* Contenedor de los campos de entrada de los números faltantes */
+.missing-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Campo de entrada de número faltante */
+.input-missing-number {
+  width: 60px;
+  padding: 10px;
+  border: 1px solid #d1d9e6;
+  border-radius: 10px;
+  background-color: #f9fbfc;
+  font-size: 1em;
+  color: #34495e;
+  text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-missing-number:focus {
+  border-color: #5dade2;
+  outline: none;
+  box-shadow: 0 0 10px rgba(93, 173, 226, 0.2);
+}
+
+/* Botón de validación */
+.btn-validate {
+  padding: 12px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4cd3c2;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-validate:hover {
+  background-color: #3bb9ab;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Mensaje de retroalimentación */
+.feedback-message {
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #34495e;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Colores de retroalimentación basados en clases dinámicas */
+.feedback-success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.feedback-error {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .game-container {
+    padding: 30px;
+    margin: 20px auto;
+  }
+
+  .game-title {
+    font-size: 1.8em;
+  }
+
+  .input-missing-number {
+    width: 50px;
+    padding: 8px;
+  }
+
+  .btn-validate {
+    padding: 10px 15px;
+    font-size: 1em;
+  }
+}
+
+/* Responsivo para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .game-container {
+    padding: 20px;
+  }
+
+  .game-title {
+    font-size: 1.6em;
+  }
+
+  .input-missing-number {
+    width: 45px;
+    padding: 8px;
+  }
+
+  .btn-validate {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+}

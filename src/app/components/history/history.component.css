@@ -1,0 +1,141 @@
+/* Contenedor principal del historial */
+.history-container {
+    max-width: 800px;
+    width: 90%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin: 40px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .history-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Título del historial */
+  .history-title {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+  }
+  
+  /* Grupo de búsqueda */
+  .search-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #d1d9e6;
+    border-radius: 8px;
+    background-color: #f9fbfc;
+    font-size: 1em;
+    color: #34495e;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #5dade2;
+    outline: none;
+    box-shadow: 0 0 10px rgba(93, 173, 226, 0.2);
+  }
+  
+  /* Botón de búsqueda */
+  .btn-search {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4cd3c2;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-search:hover {
+    background-color: #3bb9ab;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Estilos del registro del historial */
+  .history-log {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1em;
+    color: #34495e;
+  }
+  
+  .history-entry {
+    margin-bottom: 15px;
+  }
+  
+  .divider {
+    border: 0;
+    height: 1px;
+    background-color: #d1d9e6;
+    margin: 10px 0;
+  }
+  
+  .no-results {
+    font-size: 1.1em;
+    color: #95a5a6;
+    text-align: center;
+  }
+  
+  /* Responsivo para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .history-container {
+      padding: 20px;
+    }
+  
+    .history-title {
+      font-size: 1.8em;
+    }
+  
+    .search-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 0.9em;
+    }
+  
+    .btn-search {
+      padding: 10px 18px;
+      font-size: 1em;
+    }
+  }
+  
+  /* Responsivo para pantallas muy pequeñas (como móviles) */
+  @media (max-width: 480px) {
+    .history-container {
+      padding: 15px;
+    }
+  
+    .history-title {
+      font-size: 1.6em;
+    }
+  
+    .search-input {
+      width: 100%;
+      padding: 8px;
+      font-size: 0.85em;
+    }
+  
+    .btn-search {
+      padding: 8px 15px;
+      font-size: 0.9em;
+    }
+  }
+  

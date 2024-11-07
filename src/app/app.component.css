@@ -1,0 +1,52 @@
+/* Contenedor general de la aplicación */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f7fa;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilos para el encabezado */
+.app-header {
+  background-color: #ffffff;
+  color: #333;
+  padding: 15px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1  em;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Espaciado entre el encabezado y el contenido principal */
+.content-wrapper {
+  flex-grow: 1;
+  padding-top: 20px; /* Espacio entre encabezado y contenido */
+}
+
+/* Estilos para el pie de página */
+.app-footer {
+  background-color: #002f2f;
+  color: #a0b5b5;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 1px solid #003d3d;
+  box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.05);
+  margin-top: auto;
+  letter-spacing: 0.5px;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .app-header {
+    font-size: 1.4em;
+    padding: 10px 0;
+  }
+
+  .app-footer {
+    padding: 8px 0;
+    font-size: 0.8em;
+  }
+}

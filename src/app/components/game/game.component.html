@@ -1,0 +1,21 @@
+<div class="game-container">
+  <h2 class="game-title">Encuentra los Números Faltantes</h2>
+  
+  <div class="number-list">
+    <span *ngFor="let number of numberList" class="number-item">{{ number }}</span>
+  </div>
+
+  <h4 class="missing-title">Números que faltan:</h4>
+  <div class="missing-inputs">
+    <input *ngFor="let i of missingNumbers; let index = index" 
+           type="number" [(ngModel)]="userInputs[index]" 
+           placeholder="Número {{ index + 1 }}" 
+           class="input-missing-number">
+  </div>
+  
+  <button class="btn btn-validate" (click)="validateInput()">Validar</button>
+  
+  <div class="feedback-message" [ngClass]="feedbackClass">
+    {{ feedbackMessage }}
+  </div>
+</div>

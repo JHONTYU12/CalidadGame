@@ -1,0 +1,28 @@
+<!-- src/app/components/login/login.component.html -->
+<div class="login-container">
+  <h2>Bienvenido</h2>
+
+  <div class="input-group">
+    <label for="therapist-cedula">Cédula del Terapeuta:</label>
+    <input
+      type="text"
+      id="therapist-cedula"
+      [(ngModel)]="therapistCedula"
+      placeholder="Ingrese cédula del terapeuta"
+      required
+    />
+  </div> 
+  <div class="input-group">
+    <label for="patient-cedula">Cédula del Paciente:</label>
+    <input
+      type="text"
+      id="patient-cedula"
+      [(ngModel)]="patientCedula"
+      placeholder="Ingrese cédula del paciente"
+      required
+    />
+  </div>
+
+  <button class="btn btn-green" (click)="goToConfiguration()">Continuar</button>
+  <button class="btn btn-blue" (click)="goToHistory()">Historial</button>
+</div>

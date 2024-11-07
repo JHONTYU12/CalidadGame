@@ -1,0 +1,35 @@
+<div class="result-container">
+  <h2 class="title">Resultado del Juego</h2>
+
+  <div class="observation-section">
+    <label for="observation" class="observation-label">Observaciones:</label>
+    <textarea
+      id="observation"
+      class="observation-input"
+      [(ngModel)]="observation"
+      placeholder="Escribe tus observaciones aquí..."
+    ></textarea>
+  </div>
+
+  <div class="time-section">
+    <p class="time-text">Tiempo Total: <span id="total-time" class="time-result">{{ timeResult }}</span></p>
+    <p class="time-text">Tiempo por Ronda: <span id="round-time">{{ timeTaken }}</span> segundos</p>
+  </div>
+
+  <div class="errors-section">
+    <h3 class="subtitle">Conteo de Errores</h3>
+    <div class="error-list">
+      <p *ngFor="let error of errorsPerNumber; let i = index" class="error-item">
+        Errores en el Número {{ i + 1 }}: <span class="error-count">{{ error }}</span>
+      </p>
+      <p class="total-errors">Errores Totales: <span class="error-total">{{ totalErrors }}</span></p>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button id="save-result" class="btn btn-green" (click)="saveResult()">Guardar</button>
+    <button id="retry-game" class="btn btn-blue" (click)="retryGame()">Volver a Intentar</button>
+    <button id="new-game" class="btn btn-purple" (click)="newGame()">Jugar Otra Partida</button>
+    <button id="go-to-main" class="btn btn-gray" (click)="goToMain()">Inicio</button>
+  </div>
+</div>
